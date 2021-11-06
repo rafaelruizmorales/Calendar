@@ -10,6 +10,11 @@ if (month < 1 || month > 12) {
     process.exit()
 }
 
+if (year < 0) {
+    console.error('ERROR! Year should be a number bigger than 0')
+    process.exit()
+}
+
 calendar(year, month);
 
 function calendar(year, month) {
